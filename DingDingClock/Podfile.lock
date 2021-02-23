@@ -1,0 +1,38 @@
+PODS:
+  - Masonry (1.1.0)
+  - NOVUtilities (0.0.1):
+    - NOVUtilities/Defines (= 0.0.1)
+    - NOVUtilities/Foundation-Categories (= 0.0.1)
+    - NOVUtilities/Objc-Utilities (= 0.0.1)
+    - NOVUtilities/YYUtilities (= 0.0.1)
+  - NOVUtilities/Defines (0.0.1):
+    - NOVUtilities/Foundation-Categories
+  - NOVUtilities/Foundation-Categories (0.0.1)
+  - NOVUtilities/Objc-Utilities (0.0.1)
+  - NOVUtilities/YYUtilities (0.0.1):
+    - NOVUtilities/Defines
+
+DEPENDENCIES:
+  - Masonry
+  - NOVUtilities (from `https://github.com/Jdb156158/NOVUtilities.git`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  NOVUtilities:
+    :git: https://github.com/Jdb156158/NOVUtilities.git
+
+CHECKOUT OPTIONS:
+  NOVUtilities:
+    :commit: 54a58ee30c4b235a5cad1b74ac05c77d99ca23b5
+    :git: https://github.com/Jdb156158/NOVUtilities.git
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  NOVUtilities: 6ec1834cca757a718b1943c94764d19008526e12
+
+PODFILE CHECKSUM: 42a8c77891eea0ff79fcc8eebf9d06fcba87962f
+
+COCOAPODS: 1.10.0

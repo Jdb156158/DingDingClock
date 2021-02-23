@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07AFD8CA25E509F500A323A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AFD8C925E509F500A323A0 /* AppDelegate.m */; };
+		07AFD8D025E509F500A323A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AFD8CF25E509F500A323A0 /* ViewController.m */; };
+		07AFD8D325E509F500A323A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AFD8D125E509F500A323A0 /* Main.storyboard */; };
+		07AFD8D525E509F800A323A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07AFD8D425E509F800A323A0 /* Assets.xcassets */; };
+		07AFD8D825E509F900A323A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AFD8D625E509F900A323A0 /* LaunchScreen.storyboard */; };
+		07AFD8DB25E509F900A323A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AFD8DA25E509F900A323A0 /* main.m */; };
+		07AFD8E925E50C3D00A323A0 /* SleepDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AFD8E625E50C3D00A323A0 /* SleepDetailViewController.xib */; };
+		07AFD8EA25E50C3D00A323A0 /* SleepDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AFD8E825E50C3D00A323A0 /* SleepDetailViewController.m */; };
+		07AFD8F125E50E6000A323A0 /* JDBDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AFD8F025E50E6000A323A0 /* JDBDatePickerView.m */; };
+		07AFD8F525E50ED200A323A0 /* SleepRotatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AFD8F425E50ED200A323A0 /* SleepRotatingView.m */; };
+		07AFD90025E51B6200A323A0 /* BebasNeueBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 07AFD8FF25E51B6200A323A0 /* BebasNeueBold.otf */; };
+		B57E78194E3D28543E312A00 /* Pods_DingDingClock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F237D68E499C34824D8B4F73 /* Pods_DingDingClock.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07AFD8C525E509F500A323A0 /* DingDingClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingDingClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07AFD8C825E509F500A323A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07AFD8C925E509F500A323A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07AFD8CE25E509F500A323A0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07AFD8CF25E509F500A323A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07AFD8D225E509F500A323A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07AFD8D425E509F800A323A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07AFD8D725E509F900A323A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07AFD8D925E509F900A323A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07AFD8DA25E509F900A323A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07AFD8E625E50C3D00A323A0 /* SleepDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepDetailViewController.xib; sourceTree = "<group>"; };
+		07AFD8E725E50C3D00A323A0 /* SleepDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepDetailViewController.h; sourceTree = "<group>"; };
+		07AFD8E825E50C3D00A323A0 /* SleepDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepDetailViewController.m; sourceTree = "<group>"; };
+		07AFD8EF25E50E6000A323A0 /* JDBDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDBDatePickerView.h; sourceTree = "<group>"; };
+		07AFD8F025E50E6000A323A0 /* JDBDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDBDatePickerView.m; sourceTree = "<group>"; };
+		07AFD8F325E50ED200A323A0 /* SleepRotatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepRotatingView.h; sourceTree = "<group>"; };
+		07AFD8F425E50ED200A323A0 /* SleepRotatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepRotatingView.m; sourceTree = "<group>"; };
+		07AFD8FC25E50FF900A323A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		07AFD8FF25E51B6200A323A0 /* BebasNeueBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeueBold.otf; sourceTree = "<group>"; };
+		54021332F2790166320D7CF2 /* Pods-DingDingClock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingDingClock.release.xcconfig"; path = "Target Support Files/Pods-DingDingClock/Pods-DingDingClock.release.xcconfig"; sourceTree = "<group>"; };
+		92FE06E0E2FCB53F3002DF35 /* Pods-DingDingClock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingDingClock.debug.xcconfig"; path = "Target Support Files/Pods-DingDingClock/Pods-DingDingClock.debug.xcconfig"; sourceTree = "<group>"; };
+		F237D68E499C34824D8B4F73 /* Pods_DingDingClock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingDingClock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07AFD8C225E509F500A323A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B57E78194E3D28543E312A00 /* Pods_DingDingClock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07AFD8BC25E509F400A323A0 = {
+			isa = PBXGroup;
+			children = (
+				07AFD8C725E509F500A323A0 /* DingDingClock */,
+				07AFD8C625E509F500A323A0 /* Products */,
+				7011796FE8BD478C36DEBD5F /* Pods */,
+				5C76D7B05FFD8D6179F01729 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		07AFD8C625E509F500A323A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07AFD8C525E509F500A323A0 /* DingDingClock.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07AFD8C725E509F500A323A0 /* DingDingClock */ = {
+			isa = PBXGroup;
+			children = (
+				07AFD8C825E509F500A323A0 /* AppDelegate.h */,
+				07AFD8C925E509F500A323A0 /* AppDelegate.m */,
+				07AFD8CE25E509F500A323A0 /* ViewController.h */,
+				07AFD8CF25E509F500A323A0 /* ViewController.m */,
+				07AFD8F325E50ED200A323A0 /* SleepRotatingView.h */,
+				07AFD8F425E50ED200A323A0 /* SleepRotatingView.m */,
+				07AFD8EF25E50E6000A323A0 /* JDBDatePickerView.h */,
+				07AFD8F025E50E6000A323A0 /* JDBDatePickerView.m */,
+				07AFD8E725E50C3D00A323A0 /* SleepDetailViewController.h */,
+				07AFD8E825E50C3D00A323A0 /* SleepDetailViewController.m */,
+				07AFD8E625E50C3D00A323A0 /* SleepDetailViewController.xib */,
+				07AFD8D125E509F500A323A0 /* Main.storyboard */,
+				07AFD8D425E509F800A323A0 /* Assets.xcassets */,
+				07AFD8D625E509F900A323A0 /* LaunchScreen.storyboard */,
+				07AFD8D925E509F900A323A0 /* Info.plist */,
+				07AFD8DA25E509F900A323A0 /* main.m */,
+				07AFD8FF25E51B6200A323A0 /* BebasNeueBold.otf */,
+				07AFD8FC25E50FF900A323A0 /* PrefixHeader.pch */,
+			);
+			path = DingDingClock;
+			sourceTree = "<group>";
+		};
+		5C76D7B05FFD8D6179F01729 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F237D68E499C34824D8B4F73 /* Pods_DingDingClock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7011796FE8BD478C36DEBD5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92FE06E0E2FCB53F3002DF35 /* Pods-DingDingClock.debug.xcconfig */,
+				54021332F2790166320D7CF2 /* Pods-DingDingClock.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07AFD8C425E509F500A323A0 /* DingDingClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07AFD8DE25E509F900A323A0 /* Build configuration list for PBXNativeTarget "DingDingClock" */;
+			buildPhases = (
+				3EDC1FC913808F22AB199B5D /* [CP] Check Pods Manifest.lock */,
+				07AFD8C125E509F500A323A0 /* Sources */,
+				07AFD8C225E509F500A323A0 /* Frameworks */,
+				07AFD8C325E509F500A323A0 /* Resources */,
+				E47AF700369B9D230CC6DE89 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DingDingClock;
+			productName = DingDingClock;
+			productReference = 07AFD8C525E509F500A323A0 /* DingDingClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07AFD8BD25E509F400A323A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					07AFD8C425E509F500A323A0 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 07AFD8C025E509F500A323A0 /* Build configuration list for PBXProject "DingDingClock" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07AFD8BC25E509F400A323A0;
+			productRefGroup = 07AFD8C625E509F500A323A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07AFD8C425E509F500A323A0 /* DingDingClock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07AFD8C325E509F500A323A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07AFD8D825E509F900A323A0 /* LaunchScreen.storyboard in Resources */,
+				07AFD8E925E50C3D00A323A0 /* SleepDetailViewController.xib in Resources */,
+				07AFD8D525E509F800A323A0 /* Assets.xcassets in Resources */,
+				07AFD8D325E509F500A323A0 /* Main.storyboard in Resources */,
+				07AFD90025E51B6200A323A0 /* BebasNeueBold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EDC1FC913808F22AB199B5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DingDingClock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E47AF700369B9D230CC6DE89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DingDingClock/Pods-DingDingClock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DingDingClock/Pods-DingDingClock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DingDingClock/Pods-DingDingClock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07AFD8C125E509F500A323A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07AFD8D025E509F500A323A0 /* ViewController.m in Sources */,
+				07AFD8EA25E50C3D00A323A0 /* SleepDetailViewController.m in Sources */,
+				07AFD8F525E50ED200A323A0 /* SleepRotatingView.m in Sources */,
+				07AFD8F125E50E6000A323A0 /* JDBDatePickerView.m in Sources */,
+				07AFD8CA25E509F500A323A0 /* AppDelegate.m in Sources */,
+				07AFD8DB25E509F900A323A0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07AFD8D125E509F500A323A0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07AFD8D225E509F500A323A0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07AFD8D625E509F900A323A0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07AFD8D725E509F900A323A0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07AFD8DC25E509F900A323A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		07AFD8DD25E509F900A323A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07AFD8DF25E509F900A323A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92FE06E0E2FCB53F3002DF35 /* Pods-DingDingClock.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7YBM7MWE6;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DingDingClock/PrefixHeader.pch";
+				INFOPLIST_FILE = DingDingClock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbb.DingDingClock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07AFD8E025E509F900A323A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54021332F2790166320D7CF2 /* Pods-DingDingClock.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7YBM7MWE6;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DingDingClock/PrefixHeader.pch";
+				INFOPLIST_FILE = DingDingClock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbb.DingDingClock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07AFD8C025E509F500A323A0 /* Build configuration list for PBXProject "DingDingClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07AFD8DC25E509F900A323A0 /* Debug */,
+				07AFD8DD25E509F900A323A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07AFD8DE25E509F900A323A0 /* Build configuration list for PBXNativeTarget "DingDingClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07AFD8DF25E509F900A323A0 /* Debug */,
+				07AFD8E025E509F900A323A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07AFD8BD25E509F400A323A0 /* Project object */;
+}
