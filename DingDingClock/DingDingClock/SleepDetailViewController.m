@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIView *KeepOutBgView;
 @property (weak, nonatomic) IBOutlet UILabel *expectedLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *sleepBgImageView;
+@property (weak, nonatomic) IBOutlet UIButton *souquanBtn;
+
 @property (assign, nonatomic) BOOL isStart;
 @property (strong, nonatomic) JDBDatePickerView *pickerView;
 @property (strong, nonatomic) SleepRotatingView *rotatingView;
@@ -72,6 +74,14 @@
     self.rotatingView = [[SleepRotatingView alloc] initWithFrame:CGRectMake(kScreenWidth/2-200/2, kScreenHeight/2-220, 200, 200)];
     self.rotatingView.hidden = YES;
     [self.view addSubview:self.rotatingView];
+    
+    //Estimated time
+    UILabel *estimatedLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.rotatingView.frame.size.width/2-150/2, self.rotatingView.frame.size.height/2-80, 150, 50)];
+    estimatedLabel.font = [UIFont fontWithName:@"BebasNeueBold" size:15];
+    estimatedLabel.text = @"预计打卡时间";
+    estimatedLabel.textColor = [UIColor whiteColor];
+    estimatedLabel.textAlignment = NSTextAlignmentCenter;
+    [self.rotatingView addSubview:estimatedLabel];
     
     self.currentTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.rotatingView.frame.size.width/2-100/2, self.rotatingView.frame.size.height/2-50/2, 100, 50)];
     self.currentTimeLabel.font = [UIFont fontWithName:@"BebasNeueBold" size:48];
@@ -184,7 +194,7 @@
         self.expectedLabel.hidden = YES;
         self.rotatingView.hidden = NO;
         self.KeepOutBgView.hidden = NO;
-        self.currentTimeLabel.text = [[NSDate date] stringWithFormat:@"HH : mm"];
+        self.currentTimeLabel.text = [NSString stringWithFormat:@"%ld : %ld",(long)self.hours,self.minute];//[[NSDate date] stringWithFormat:@"HH : mm"];
         if (self.currentTimer) {
             //定时器开始
             [self.currentTimer setFireDate:[NSDate date]];
@@ -223,12 +233,22 @@
     
 }
 
-
+#pragma mark - 钉钉授权
+- (IBAction)dingdingEnable:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"dingtalk-open://"];
+    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+        if(success){
+            NSLog(@"打卡成功");
+        }else{
+            NSLog(@"打卡失败，继续执行");
+        }
+    }];
+}
 
 #pragma mark - 开始睡眠后，时间沙漏
 - (void)updateTime{
     
-    self.currentTimeLabel.text = [[NSDate date] stringWithFormat:@"HH : mm"];
+    //self.currentTimeLabel.text = [[NSDate date] stringWithFormat:@"HH : mm:ss"];
     
     [self timeDifferenceTheHours:self.hours theMinute:self.minute];
     
@@ -278,7 +298,9 @@
 #pragma mark - 预期睡眠时长计算
 - (void)timeDifferenceTheHours:(NSInteger)hours theMinute:(NSInteger)minute{
     
-    NSUInteger unitFlags = NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute;
+    NSInteger seconds = 0;
+    
+    NSUInteger unitFlags = NSCalendarUnitYear| NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute  | NSCalendarUnitSecond;
     // 获取代表公历的NSCalendar对象
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     // 获取当前日期
@@ -291,7 +313,7 @@
     if (hours>comp.hour) {
         //选择的时间未垮天
         //NSLog(@"未跨天");
-        NSDate* newDate =[NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",comp.year,comp.month,comp.day,hours,minute] format:@"yyyy-MM-dd HH:mm:ss"];
+        NSDate* newDate =[NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",comp.year,comp.month,comp.day,hours,minute,seconds] format:@"yyyy-MM-dd HH:mm:ss"];
 
         cmps = [gregorian components:unitFlags fromDate:dt toDate:newDate options:0];
         
@@ -299,12 +321,12 @@
         
         if (minute>comp.minute) {
             //NSLog(@"未跨天");
-            NSDate* newDate =[NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",comp.year,comp.month,comp.day,hours,minute] format:@"yyyy-MM-dd HH:mm:ss"];
+            NSDate* newDate =[NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",comp.year,comp.month,comp.day,hours,minute,seconds] format:@"yyyy-MM-dd HH:mm:ss"];
 
             cmps = [gregorian components:unitFlags fromDate:dt toDate:newDate options:0];
         }else{
             //NSLog(@"跨天了");
-            NSDate* newDate =[NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",comp.year,comp.month,(comp.day+1),hours,minute] format:@"yyyy-MM-dd HH:mm:ss"];
+            NSDate* newDate =[NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",comp.year,comp.month,(comp.day+1),hours,minute,seconds] format:@"yyyy-MM-dd HH:mm:ss"];
             
             cmps = [gregorian components:unitFlags fromDate:dt toDate:newDate options:0];
         }
@@ -312,7 +334,7 @@
     }else{
         //选择的时间垮天
         //NSLog(@"跨天了");
-        NSDate* newDate =[NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",comp.year,comp.month,(comp.day+1),hours,minute] format:@"yyyy-MM-dd HH:mm:ss"];
+        NSDate* newDate =[NSDate dateWithString:[NSString stringWithFormat:@"%ld-%ld-%ld %ld:%ld:%ld",comp.year,comp.month,(comp.day+1),hours,minute,seconds] format:@"yyyy-MM-dd HH:mm:ss"];
         
         cmps = [gregorian components:unitFlags fromDate:dt toDate:newDate options:0];
         
@@ -320,8 +342,14 @@
     
     if (cmps != nil) {
         //NSLog(@"===时间差：%ld小时：%ld分钟==",cmps.hour,cmps.minute);
-        self.expectedLabel.text = [NSString stringWithFormat:@"%@ : %ld %@ %ld %@",@"距离打卡时间",cmps.hour,@"小时",cmps.minute,@"分"];
-        self.stopTimeLabel.text = [NSString stringWithFormat:@"%ld : %ld : %ld",cmps.hour,cmps.minute,cmps.second];
+        if (cmps.minute == 0 && cmps.second == 0) {
+            //前去打卡
+            NSLog(@"去打卡咯");
+        }else{
+            self.expectedLabel.text = [NSString stringWithFormat:@"%@ : %ld %@ %ld %@ %ld %@",@"距离打卡时间",cmps.hour,@"小时",cmps.minute,@"分",cmps.second,@"秒"];
+            self.stopTimeLabel.text = [NSString stringWithFormat:@"%ld : %ld : %ld",cmps.hour,cmps.minute,cmps.second];
+        }
+        
     }
     
 }
