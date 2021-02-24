@@ -345,6 +345,7 @@
         if (cmps.minute == 0 && cmps.second == 0) {
             //前去打卡
             NSLog(@"去打卡咯");
+            [self dingdingEnable:nil];
         }else{
             self.expectedLabel.text = [NSString stringWithFormat:@"%@ : %ld %@ %ld %@ %ld %@",@"距离打卡时间",cmps.hour,@"小时",cmps.minute,@"分",cmps.second,@"秒"];
             self.stopTimeLabel.text = [NSString stringWithFormat:@"%ld : %ld : %ld",cmps.hour,cmps.minute,cmps.second];
